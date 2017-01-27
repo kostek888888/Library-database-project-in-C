@@ -18,6 +18,11 @@
 
 
 /Doxygen/html/* linguist-vendored
+<<<<<<< HEAD
 /poprawne_kodowanie/Windows/Doxygen/html/* linguist-vendored
 /poprawne_kodowanie/Linux/Doxygen/html/* linguist-vendored
+=======
+/poprawne kodowanie/Windows/Doxygen/html/* linguist-vendored
+/poprawne kodowanie/Linux/Doxygen/html/* linguist-vendored
+>>>>>>> origin/master
 
