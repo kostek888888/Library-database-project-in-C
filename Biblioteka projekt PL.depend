@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1465857733 source:c:\users\asuspolska\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\books.c
+	"books.h"
+	<stdio.h>
+	<stdlib.h>
+
+1465855413 c:\users\asuspolska\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\books.h
+
+1465857787 source:c:\users\asuspolska\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\clients.c
+	"clients.h"
+	<stdio.h>
+	<stdlib.h>
+
+1465855413 c:\users\asuspolska\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\clients.h
+
+1465856617 source:c:\users\asuspolska\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"clients.h"
+	"books.h"
+
+1467289747 source:c:\users\koste\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\books.c
+	"books.h"
+	<stdio.h>
+	<stdlib.h>
+
+1467154883 c:\users\koste\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\books.h
+
+1467285069 source:c:\users\koste\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\clients.c
+	"clients.h"
+	<stdio.h>
+	<stdlib.h>
+
+1467216252 c:\users\koste\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\clients.h
+
+1467285025 source:c:\users\koste\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"clients.h"
+	"books.h"
+	"borrow.h"
+
+1467290012 source:c:\users\koste\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\borrow.c
+	"borrow.h"
+	<stdio.h>
+	<stdlib.h>
+
+1467283647 c:\users\koste\onedrive\informatyka\semestr 2\podstawy programowania 2\projekt\biblioteka projekt pl\biblioteka projekt pl\borrow.h
+

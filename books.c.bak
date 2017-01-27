@@ -1,0 +1,286 @@
+
+#include "books.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+void new_book_fill(Library *(*new_node)) {
+
+    char buffer[100]; /// grab strings
+    int numbers; /// grab numbers
+    gets(buffer); /// flush enter
+    printf(" Podaj dane dotycz¥ce ksi¥¾ki, kolejno:\n\n");
+    printf(" Tytuˆ: ");
+    gets(buffer);
+    strcpy((*new_node)->title, buffer);
+    printf("\n Autor: ");
+    gets(buffer);
+    strcpy((*new_node)->author, buffer);
+    printf("\n Rok wydania: ");
+    scanf(" %d",&numbers);
+    gets(buffer);
+    (*new_node)->year = numbers;
+    printf("\n Gatunek ksi¥¾ki: ");
+    gets(buffer);
+    strcpy((*new_node)->genre, buffer);
+    printf("\n Liczba kopii dost©pnych na stanie: ");
+    scanf(" %d",&numbers);
+    (*new_node)->copies = numbers;
+    printf("\n Liczba wypo¾yczonych obecnie kopii: ");
+    scanf(" %d",&numbers);
+    (*new_node)->borrowed = numbers;
+}
+
+void add_new_book(Library **base_pointer, int id) {
+
+    Library *new_book = (Library*)malloc(sizeof(Library));
+
+    if(new_book!=NULL)
+    {
+        new_book->next = *base_pointer;
+        *base_pointer = new_book;
+        new_book->id = id;
+        new_book_fill(&new_book);
+    }
+}
+
+void delete_base(Library **base_pointer) {
+    while(*base_pointer!=NULL) {
+        Library *next = (*base_pointer)->next;
+        free(*base_pointer);
+        *base_pointer=next;
+    }
+}
+
+void search_for_book(Library *base_pointer)
+{
+    int id_to_search;
+    printf("\n Wpisz id ksi¥¾ki jak¥ chcesz znale«†: ");
+    scanf(" %d",&id_to_search);
+    Library *temporary_pointer = base_pointer;
+    while(((temporary_pointer)->id!=id_to_search)&&(temporary_pointer!=NULL))
+        {
+            temporary_pointer=temporary_pointer->next;
+        }
+    if(temporary_pointer!=NULL)
+        {
+            printf(" %3d. ",temporary_pointer->id);
+            printf(" %-10s ",temporary_pointer->title);
+            printf(" %4d. ",temporary_pointer->year);
+            printf(" %-10s ",temporary_pointer->author);
+            printf(" %-10s ",temporary_pointer->genre);
+            printf(" %4d. ",temporary_pointer->copies);
+            printf(" %4d. ",temporary_pointer->borrowed);
+        }
+        else
+            printf(" Brak ksi¥¾ek speˆniaj¥cych kryteria\n");
+}
+
+void delete_book(Library **base_pointer){
+    int id;
+    printf(" Wpisz id ksi¥¾ki, kt¢r¥ chcesz usun¥† z bazy: ");
+    scanf(" %d",&id);
+    Library *tmp_pointer=*base_pointer;
+
+    if((*base_pointer)->id==id){
+        *base_pointer=(*base_pointer)->next;
+        free(tmp_pointer);
+        printf("\n Usuni©cie ksi¥¾ki zakoäczone sukcesem.\n");
+    } else {
+        Library *one_book_before;
+
+        while((tmp_pointer!=NULL)&&(tmp_pointer->id!=id)){
+            one_book_before=tmp_pointer;
+            tmp_pointer=tmp_pointer->next;
+        }
+
+        Library *tmp_pointer_2=one_book_before->next;
+
+        if(one_book_before!=NULL) {
+            one_book_before->next=tmp_pointer_2->next;
+            free(tmp_pointer_2);
+        }
+    }
+}
+
+
+void cout_base(Library *base_pointer) {
+
+    if (base_pointer!=NULL)
+    {
+        cout_base(base_pointer->next);
+        printf("ID: %d ",base_pointer->id);
+        printf("tytuˆ: %-10s ",base_pointer->title);
+        printf("rok: %4d ",base_pointer->year);
+        printf("autor: %-10s ",base_pointer->author);
+        printf("Gatunek: %-10s ",base_pointer->genre);
+        printf("Dost©pne kopie: %d ",base_pointer->copies);
+        printf("Wypo¾yczonych: %d \n",base_pointer->borrowed);
+    }
+}
+
+
+void write_to_file(Library *base_pointer)
+{
+    FILE *file1;
+    file1=fopen("books.txt", "w");
+    file1=fopen("books.txt", "a");
+        if(file1==NULL)
+                printf(" Wyst¥piˆ bˆ¥d z plikiem books.txt\n");
+        else
+        {
+            if(base_pointer!=NULL)
+            {
+                write_to_file(base_pointer->next);
+                fprintf(file1,"%d",base_pointer->id);
+                fprintf(file1," %-s",base_pointer->title);
+                fprintf(file1," %s",base_pointer->author);
+                fprintf(file1," %d",base_pointer->year);
+                fprintf(file1," %s",base_pointer->genre);
+                fprintf(file1," %d",base_pointer->copies);
+                fprintf(file1," %d\n",base_pointer->borrowed);
+            }
+        }
+    fclose(file1);
+}
+
+void read_file1()
+{
+    char letter;
+    FILE *file1;
+
+    file1=fopen("books.txt", "r");
+    while((letter=fgetc(file1))!=EOF)
+    {
+        printf("%c",letter);
+    }
+    fclose(file1);
+}
+
+
+void edit_book(Library *base_pointer) {
+    char buffer[100];
+    int numbers;
+
+    printf("Wpisz nazwę książki, którą chcesz edytować: ");
+    gets(buffer);
+    gets(buffer);
+
+    Library *temporary_pointer = base_pointer;
+
+    while((strcmp((temporary_pointer)->title,buffer)!=0)&&(temporary_pointer!=NULL))
+        {
+            temporary_pointer=temporary_pointer->next;
+        }
+    if(temporary_pointer!=NULL)
+        {
+            printf(" UWAGA edycja danych o książce:\n\n");
+
+            printf(" Tytuˆ: ");
+            printf("\n%-10s",temporary_pointer->title);
+            printf(" Czy chcesz go zmienić? Kropka pomija podpunkt\n");
+            gets(buffer);
+            if(buffer!='.')
+            strcpy(temporary_pointer->title, buffer);
+
+            printf("\n Autor: ");
+            printf("\n%-10s",temporary_pointer->author);
+            printf(" Czy chcesz go zmienić? Kropka pomija podpunkt\n");
+            gets(buffer);
+            if(buffer!='.')
+            strcpy(temporary_pointer->author, buffer);
+
+            printf("\n Rok wydania: ");
+            printf("\n%4d",temporary_pointer->year);
+            printf(" Czy chcesz go zmienić? Wartość mniejsza lub równa zero pomija podpunkt\n");
+            scanf(" %d",&numbers);
+            gets(buffer);
+            if(numbers>0)
+            temporary_pointer->year = numbers;
+
+            printf("\n Gatunek ksi¥¾ki: ");
+            printf("\n%-10s",temporary_pointer->genre);
+            printf(" Czy chcesz go zmienić? Kropka pomija podpunkt\n");
+            gets(buffer);
+            if(buffer!='.')
+            strcpy(temporary_pointer->genre, buffer);
+
+            printf("\n Liczba kopii dost©pnych na stanie: ");
+            printf("%d\n",temporary_pointer->copies);
+            printf(" Czy chcesz go zmienić? Wartość mniejsza lub równa zero pomija podpunkt\n");
+            scanf(" %d",&numbers);
+            gets(buffer);
+            if(numbers>0)
+            temporary_pointer->copies = numbers;
+
+            printf("\n Liczba wypo¾yczonych obecnie kopii: ");
+            printf("%d\n",temporary_pointer->borrowed);
+            printf(" Czy chcesz go zmienić? Wartość mniejsza lub równa zero pomija podpunkt\n");
+            scanf(" %d",&numbers);
+            if(numbers>0)
+            temporary_pointer->borrowed = numbers;
+        }
+        else
+            printf("Nie znaleziono takiej ksiażki");
+
+
+}
+
+
+
+void sort_book_list(Library *base_pointer){
+
+Library *wsk=base_pointer;
+
+int choice_one=0;
+int choice_two=0;
+
+///NOTE add system(CLEAR) before this function
+
+printf(" Wybierz po jakim polu chcesz sortować książki? Oto opcje:\n");
+printf(" 1. Tytuł\n");
+printf(" 2. Autor\n");
+printf(" 3. Rok wydania\n");
+printf(" 4. Gatunek książki");
+printf(" 5. Liczba kopii dostępnych na stanie\n");
+printf(" 6. Liczba wypożyczonych obecnie kopii\n");
+printf("    Twój wybór: ");
+
+scanf(" %d",&choice_one);
+while((choice_one<1)||(choice_one>6)){
+    printf("\n Nie wybrano poprawnie, spróbuj ponownie: ");
+    scanf(" %d",&choice_one);
+}
+
+printf("\n Wybierz kolejność sortowania: ");
+printf("\n 1. Ma")
+
+
+switch(choice) {
+    case 1:
+            printf("\n Wybrano sortowanie po tytule, wykonuję...");
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+/// ąćęńółżź

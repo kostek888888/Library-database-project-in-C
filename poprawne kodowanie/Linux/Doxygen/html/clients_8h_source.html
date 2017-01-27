@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Biblioteka projekt PL: Plik źródłowy clients.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Biblioteka projekt PL
+   &#160;<span id="projectnumber">3.0</span>
+   </div>
+   <div id="projectbrief">program symulujący bibliotekę</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Globalne</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('clients_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">clients.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="clients_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CLIENTS_H_INCLUDED</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CLIENTS_H_INCLUDED</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define CLEAR &quot;cls&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#else</span></div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="clients_8h.html#a611cc9b5f655508482f3d7a9751c182a">    7</a></span>&#160;<span class="preprocessor">#define CLEAR &quot;clear&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">   10</a></span>&#160;<span class="preprocessor">#define Client struct client_base</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="clients_8h.html#a5156a9b8f5be467fc3145e7f746334df">   26</a></span>&#160;<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#a81633369010405f6d037092570b2d7aa">client_id</a>;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="clients_8h.html#aeaf846aa21a7d016a52f0b5b0c2f5544">   28</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="clients_8h.html#aeaf846aa21a7d016a52f0b5b0c2f5544">name</a>[100];</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="clients_8h.html#a22eff0c8641c1bce874ea51d27f74208">   29</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="clients_8h.html#a22eff0c8641c1bce874ea51d27f74208">surname</a>[100];</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="clients_8h.html#a54917bf7e217d6454bc266b96ff591cf">   30</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="clients_8h.html#a54917bf7e217d6454bc266b96ff591cf">d_of_b_day</a>;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="clients_8h.html#a09bd688c75af77e8828c84ab1cf5dd2a">   31</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="clients_8h.html#a09bd688c75af77e8828c84ab1cf5dd2a">m_of_b_day</a>;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="clients_8h.html#a7cfd6aa470285d3cb4bbae33fc87395d">   32</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="clients_8h.html#a7cfd6aa470285d3cb4bbae33fc87395d">y_of_b_day</a>;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="clients_8h.html#ab56e4f78c436d0a0d22bf1e94177ad8e">   33</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="clients_8h.html#ab56e4f78c436d0a0d22bf1e94177ad8e">pesel</a>;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="clients_8h.html#a5511548cc0c9ca9c16acd4dd048eea6a">   34</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="clients_8h.html#a5511548cc0c9ca9c16acd4dd048eea6a">id_book1</a>;</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="clients_8h.html#a5ca4f73666d456c88fd3f429eb5e5dcb">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="clients_8h.html#a5ca4f73666d456c88fd3f429eb5e5dcb">id_book2</a>;</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="clients_8h.html#a3f922cb1f33a59f9fc6bc26771dea7ef">   36</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="clients_8h.html#a3f922cb1f33a59f9fc6bc26771dea7ef">id_book3</a>;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="clients_8h.html#a91333367c3890374bf930ff44f4d3089">   37</a></span>&#160;<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> *<a class="code" href="clients_8h.html#a91333367c3890374bf930ff44f4d3089">next</a>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a4680e9f91129276cac863d4140015df7">fill_client</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> *(*new_client_node));</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a2ca73c86406eef2e9536a5d697752819">add_new_client</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> **<a class="code" href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a>, <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a81633369010405f6d037092570b2d7aa">client_id</a>);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#adb6bbadc80129f9a27faed176942a691">delete_client_base</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> **<a class="code" href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a>);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a74ba3339759dbea97b933b00f6256dd9">seek_for_client</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> *clients_base_pointer);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a40f7de339d26adc92484cb1fd7b49f26">delete_client</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> **<a class="code" href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a>);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a12a0fab61087d177fbf86001fdf1ae7a">cout_client_base</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> *<a class="code" href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a>);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a945d9ce62865c6e7b4304093959defa3">clients_write_to_file</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> *<a class="code" href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a>);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#aebc02719d3776db67007a5c7a5daa367">read_file2</a>();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a8b7280fab3627e4b078e9834c0690d1c">edit_client</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> *<a class="code" href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="clients_8h.html#a152b64ea51242d0bb557f0914fe4248c">sort_client_list</a>(<a class="code" href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a> *<a class="code" href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a>);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif // CLIENTS_H_INCLUDED</span></div><div class="ttc" id="clients_8h_html_a7cfd6aa470285d3cb4bbae33fc87395d"><div class="ttname"><a href="clients_8h.html#a7cfd6aa470285d3cb4bbae33fc87395d">y_of_b_day</a></div><div class="ttdeci">int y_of_b_day</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00032">clients.h:32</a></div></div>
+<div class="ttc" id="clients_8h_html_a5ca4f73666d456c88fd3f429eb5e5dcb"><div class="ttname"><a href="clients_8h.html#a5ca4f73666d456c88fd3f429eb5e5dcb">id_book2</a></div><div class="ttdeci">int id_book2</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00035">clients.h:35</a></div></div>
+<div class="ttc" id="clients_8h_html_a3f922cb1f33a59f9fc6bc26771dea7ef"><div class="ttname"><a href="clients_8h.html#a3f922cb1f33a59f9fc6bc26771dea7ef">id_book3</a></div><div class="ttdeci">int id_book3</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00036">clients.h:36</a></div></div>
+<div class="ttc" id="main_8c_html_a2a034c3dfa7c315282d09f6dcb4d3275"><div class="ttname"><a href="main_8c.html#a2a034c3dfa7c315282d09f6dcb4d3275">client_base_pointer</a></div><div class="ttdeci">Client * client_base_pointer</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00015">main.c:15</a></div></div>
+<div class="ttc" id="clients_8h_html_a2ca73c86406eef2e9536a5d697752819"><div class="ttname"><a href="clients_8h.html#a2ca73c86406eef2e9536a5d697752819">add_new_client</a></div><div class="ttdeci">void add_new_client(Client **client_base_pointer, int client_id)</div><div class="ttdoc">funkcja tworzy element listy klientów a następnie wywołuje funkcję fill_client która uzupełnia pola d...</div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00073">clients.c:73</a></div></div>
+<div class="ttc" id="clients_8h_html_a4680e9f91129276cac863d4140015df7"><div class="ttname"><a href="clients_8h.html#a4680e9f91129276cac863d4140015df7">fill_client</a></div><div class="ttdeci">void fill_client(Client *(*new_client_node))</div><div class="ttdoc">funkcja uzupełnia dane w konkretnym elemencie listy klientów utworzonym przez funkcję add_new_client ...</div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00012">clients.c:12</a></div></div>
+<div class="ttc" id="main_8c_html_a81633369010405f6d037092570b2d7aa"><div class="ttname"><a href="main_8c.html#a81633369010405f6d037092570b2d7aa">client_id</a></div><div class="ttdeci">int client_id</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00020">main.c:20</a></div></div>
+<div class="ttc" id="clients_8h_html_a12a0fab61087d177fbf86001fdf1ae7a"><div class="ttname"><a href="clients_8h.html#a12a0fab61087d177fbf86001fdf1ae7a">cout_client_base</a></div><div class="ttdeci">void cout_client_base(Client *client_base_pointer)</div><div class="ttdoc">funkcja wypisuje na ekran całą listę klientów </div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00169">clients.c:169</a></div></div>
+<div class="ttc" id="clients_8h_html_a91333367c3890374bf930ff44f4d3089"><div class="ttname"><a href="clients_8h.html#a91333367c3890374bf930ff44f4d3089">next</a></div><div class="ttdeci">Client * next</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00037">clients.h:37</a></div></div>
+<div class="ttc" id="clients_8h_html_a54917bf7e217d6454bc266b96ff591cf"><div class="ttname"><a href="clients_8h.html#a54917bf7e217d6454bc266b96ff591cf">d_of_b_day</a></div><div class="ttdeci">int d_of_b_day</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00030">clients.h:30</a></div></div>
+<div class="ttc" id="clients_8h_html_aebc02719d3776db67007a5c7a5daa367"><div class="ttname"><a href="clients_8h.html#aebc02719d3776db67007a5c7a5daa367">read_file2</a></div><div class="ttdeci">void read_file2()</div><div class="ttdoc">funkcja czyta plik clients.txt z listą klientów i wyświetla ją na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00248">clients.c:248</a></div></div>
+<div class="ttc" id="clients_8h_html_a22eff0c8641c1bce874ea51d27f74208"><div class="ttname"><a href="clients_8h.html#a22eff0c8641c1bce874ea51d27f74208">surname</a></div><div class="ttdeci">char surname[100]</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00029">clients.h:29</a></div></div>
+<div class="ttc" id="clients_8h_html_adb6bbadc80129f9a27faed176942a691"><div class="ttname"><a href="clients_8h.html#adb6bbadc80129f9a27faed176942a691">delete_client_base</a></div><div class="ttdeci">void delete_client_base(Client **client_base_pointer)</div><div class="ttdoc">funkcja usuwa całą bazę klientów </div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00095">clients.c:95</a></div></div>
+<div class="ttc" id="clients_8h_html_a8b7280fab3627e4b078e9834c0690d1c"><div class="ttname"><a href="clients_8h.html#a8b7280fab3627e4b078e9834c0690d1c">edit_client</a></div><div class="ttdeci">void edit_client(Client *client_base_pointer)</div><div class="ttdoc">funkcja pozwala na edycję pojedyńczego klienta, należy podać jego id </div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00266">clients.c:266</a></div></div>
+<div class="ttc" id="clients_8h_html_a3d43ab890cb7e54fdbae2fc93dd6e7d0"><div class="ttname"><a href="clients_8h.html#a3d43ab890cb7e54fdbae2fc93dd6e7d0">Client</a></div><div class="ttdeci">#define Client</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00010">clients.h:10</a></div></div>
+<div class="ttc" id="clients_8h_html_a5511548cc0c9ca9c16acd4dd048eea6a"><div class="ttname"><a href="clients_8h.html#a5511548cc0c9ca9c16acd4dd048eea6a">id_book1</a></div><div class="ttdeci">int id_book1</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00034">clients.h:34</a></div></div>
+<div class="ttc" id="clients_8h_html_aeaf846aa21a7d016a52f0b5b0c2f5544"><div class="ttname"><a href="clients_8h.html#aeaf846aa21a7d016a52f0b5b0c2f5544">name</a></div><div class="ttdeci">char name[100]</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00028">clients.h:28</a></div></div>
+<div class="ttc" id="clients_8h_html_a152b64ea51242d0bb557f0914fe4248c"><div class="ttname"><a href="clients_8h.html#a152b64ea51242d0bb557f0914fe4248c">sort_client_list</a></div><div class="ttdeci">void sort_client_list(Client *client_base_pointer)</div><div class="ttdoc">funkcja sortuje klientów na liście według wskazanego przez użytkownika wyboru a następnie wywołuje wy...</div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00370">clients.c:370</a></div></div>
+<div class="ttc" id="clients_8h_html_a74ba3339759dbea97b933b00f6256dd9"><div class="ttname"><a href="clients_8h.html#a74ba3339759dbea97b933b00f6256dd9">seek_for_client</a></div><div class="ttdeci">void seek_for_client(Client *clients_base_pointer)</div><div class="ttdoc">funkcja szuka klienta w liście klientów po polu id </div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00109">clients.c:109</a></div></div>
+<div class="ttc" id="clients_8h_html_a945d9ce62865c6e7b4304093959defa3"><div class="ttname"><a href="clients_8h.html#a945d9ce62865c6e7b4304093959defa3">clients_write_to_file</a></div><div class="ttdeci">void clients_write_to_file(Client *client_base_pointer)</div><div class="ttdoc">funkcja zapisuje całą listę klientów do pliku clients.txt </div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00201">clients.c:201</a></div></div>
+<div class="ttc" id="clients_8h_html_a09bd688c75af77e8828c84ab1cf5dd2a"><div class="ttname"><a href="clients_8h.html#a09bd688c75af77e8828c84ab1cf5dd2a">m_of_b_day</a></div><div class="ttdeci">int m_of_b_day</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00031">clients.h:31</a></div></div>
+<div class="ttc" id="clients_8h_html_a40f7de339d26adc92484cb1fd7b49f26"><div class="ttname"><a href="clients_8h.html#a40f7de339d26adc92484cb1fd7b49f26">delete_client</a></div><div class="ttdeci">void delete_client(Client **client_base_pointer)</div><div class="ttdoc">funkcja usuwa pojedyńczego klienta z bazy klientów </div><div class="ttdef"><b>Definition:</b> <a href="clients_8c_source.html#l00138">clients.c:138</a></div></div>
+<div class="ttc" id="clients_8h_html_ab56e4f78c436d0a0d22bf1e94177ad8e"><div class="ttname"><a href="clients_8h.html#ab56e4f78c436d0a0d22bf1e94177ad8e">pesel</a></div><div class="ttdeci">long long int pesel</div><div class="ttdef"><b>Definition:</b> <a href="clients_8h_source.html#l00033">clients.h:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="clients_8h.html">clients.h</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>
