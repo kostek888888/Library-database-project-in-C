@@ -15,3 +15,9 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+
+/Doxygen/html/* linguist-vendored
+/poprawne_kodowanie/Windows/Doxygen/html/* linguist-vendored
+/poprawne_kodowanie/Linux/Doxygen/html/* linguist-vendored
+
